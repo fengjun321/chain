@@ -1,0 +1,94 @@
+server:
+  port: 8082
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://172.31.25.243:3306/firework_marketplace?useUnicode=true&amp&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&useSSL=true&serverTimezone=GMT%2B8
+    username: market
+    password: Firework2021!@#
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall
+    # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+mybatis-plus:
+  # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/com.business.mapper/*Mapper.xml
+  # 如果是放在resource目录 classpath:/com.business.mapper/*Mapper.xml
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 2
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 2
+    #驼峰下划线转换
+    db-column-underline: true
+    #mp2.3+ 全局表前缀 mp_
+    #table-prefix: mp_
+    #刷新mapper 调试神器
+    refresh-mapper: true
+    #数据库大写下划线转换
+    capital-mode: false
+  configuration:
+    #打印sql
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #配置返回数据库(column下划线命名&&返回java实体是驼峰命名)，自动匹配无需as（没开启这个，SQL需要写as： select user_id as userId）
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    #配置JdbcTypeForNull, oracle数据库必须配置
+    jdbc-type-for-null: 'null'
+  type-aliases-package: com.fegin.bean
+#pagehelper分页插件配置
+pagehelper:
+  helperDialect: mysql
+  reasonable: false
+  supportMethodsArguments: true
+  params=count: countSql
+  sleuth:
+    sampler:
+      percentage: 1.0
+game:
+  world-url: http://127.0.0.1:9088/
+bsc:
+  scan: true
+  node:
+    url: https://bsc-dataseed2.ninicoin.io/
+    #url: https://data-seed-prebsc-1-s1.binance.org:8545
+  contract:
+    #去掉0x 防止自动转义
+    fireworkcard_address: e28647ac592E5CC81Eca240DF3923B19b6196182
+    NFTtransfer_address: 6A48188714e1C97BF8bc2675930F6d3f01f56278
+    fireworkCardMint_topic: fdcf800d47e6b3c4a4e4fbca7a07c06a9353e57135e3de1b4add48d177b2ef74
+    fireworkCardMutated_topic: 56ba3e2ed22df7d31a063bb5801e3a1883a2fa5cfc92a4a7f7fe24c6bfc54ae2
+    Transfer_topic: ddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+    NFTtransfer_topic: 2b3d2d4cc1c7d4153c1a7d8623db37f870de235226c33a1b94569583c9cd3f7b
+    NFTQuickSale_topic: 1ab9706d2abe40b6bc24dd4ad7e359fd30218a77cfabac1664f267c63f13e8d0
+    HSE_address: eC2152E56dB8F392eF3E171BC3eDBd33c0188410
+    PSE_address: 431eCF0aF334617c5C52D3f8E4B53D00B6A908e8
+    PSEMint_topic: 6443cb0a07295f419fe8a6a28c06d58ab62441df44ea519c13ba474cd3a9ef23
+    EGSE_address: 
+    EGSEMint_topic: 
+    SHIP_address: 09eC46465c77602084d53022809A47034fF02D06
+    SHIPMint_topic: b711098d9b3acb4c54eb2572cd3fb4c1d03f81deaedeb75f0dfd5be0dcb0bb7f
+    EGG_address: A9b1a219141789Ba2a3e6360D50A31C350f1B000
+    EGGMint_topic: 67828bf164e7d1f0c7169a208ad71c9457a13f0c526a5132916992f37abc593b
+    MBSE_address: C597623893C010DD0d4b02FA9cDE1fBDec74F9fb
+    ASE_address: 1ae01F1C269Cac5aDA8060F90763fC92b6F71F97
+    ASEMint_topic: ddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+    ISE_address: ac59292D98d0BeDe2FB01936Ae858E7663BCfD7E
+    ISE_topic: 4a39dc06d4c0dbc64b70af90fd698a233a518aa5d07e595d983b8c0526c8f7fb
+    #PSEClaimShipReward
+    PSE_swap_address: c937C63599c6F4509B0B84702cb8C37B97fae579
+    PSE_swap_topic: b332ebc316da84127a3dfbe8463b7f3e44f0dd9d71817547ef0200d1f2836088

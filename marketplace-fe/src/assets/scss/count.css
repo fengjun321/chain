@@ -1,0 +1,67 @@
+@media screen and (max-width: 768px) {
+  .content-box {
+    margin-top: .7rem;
+  }
+  .content-box .content-title {
+    font-size: .35rem;
+  }
+  .content-box .content-subtitle {
+    font-size: .2rem;
+    margin-top: .35rem;
+  }
+  .content-box .content-box-select, .content-box .content-box-title, .content-box .content-box-list {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .content-box .content-box-select {
+    margin-top: .73rem;
+    margin: .73rem auto 0;
+  }
+  .content-box .content-box-title {
+    display: none;
+  }
+  .content-box .content-box-list {
+    min-height: 3rem;
+    padding: 0 .7rem;
+  }
+  .content-box .content-box-list .content-box-list-box li {
+    margin-top: .52rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .content-box .content-box-list .content-box-list-box li .content-box-list-box-idd {
+    font-size: .4rem;
+  }
+  .content-box .content-box-list .content-box-list-box li .content-box-list-box-img {
+    width: 2.4rem;
+    height: .52rem;
+  }
+  .content-box .content-box-list .content-box-list-box li .content-box-list-box-img, .content-box .content-box-list .content-box-list-box li .content-box-list-box-tran, .content-box .content-box-list .content-box-list-box li .content-box-list-box-tran-img, .content-box .content-box-list .content-box-list-box li .content-box-list-box-idd2 {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    font-size: .14rem;
+  }
+  .content-box .content-box-list .content-box-list-box li .content-box-list-box-idd {
+    width: .5rem;
+    min-width: 0;
+  }
+  .content-box .content-box-list .content-box-list-box li .content-box-list-box-idd2 {
+    width: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .content-box .content-box-list .content-box-list-box li .content-box-list-box-tran .content-box-list-box-tran-iid {
+    font-size: .4rem;
+    min-width: 0;
+    width: 0.6rem;
+    text-align: center;
+  }
+  .content-box .content-box-list .content-box-list-box li .content-box-list-box-tran .content-box-list-box-tran-img {
+    width: .62rem;
+    height: .62rem;
+  }
+}
+/*# sourceMappingURL=count.css.map */

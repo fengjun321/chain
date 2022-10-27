@@ -1,0 +1,102 @@
+// 全局样式表
+
+@font-face {
+  font-family: "Shentox-Medium";
+  /*定义字体名*/
+  src: url(~@/assets/fonts/Shentox.ttf);
+  /*字体包的引入路径*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  box-sizing: border-box;
+
+  *:focus {
+    outline: none;
+  }
+
+  font-family: 'Shentox-Medium' !important;
+
+}
+
+
+.el-tooltip__popper {
+
+  border-radius: 6px !important;
+  color: #fff !important;
+  font-size: 16px !important;
+  line-height: 16px !important;
+}
+
+
+li {
+  list-style: none;
+}
+
+.sanjiaoxing-top {
+  width: 0;
+  height: 0;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 11px solid rgba(39, 187, 242, .4);
+}
+
+.sanjiaoxing-bottom {
+  width: 0;
+  height: 0;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-top: 11px solid rgba(39, 187, 242, .4);
+}
+
+.sanjiaoxing-top-active {
+  width: 0;
+  height: 0;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 11px solid rgba(39, 187, 242, .95);
+}
+
+.sanjiaoxing-bottom-active {
+  width: 0;
+  height: 0;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-top: 11px solid rgba(39, 187, 242, .95);
+}
+
+$bgc: rgba(7, 211, 254, 0.1);
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+
+}
+
+@mixin flexsp {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+@mixin img {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin bgc {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+
+@mixin psa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

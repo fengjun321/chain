@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Shentox-Medium';
+  /*定义字体名*/
+  src: url(~@/assets/fonts/Shentox.ttf);
+  /*字体包的引入路径*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Shentox-Medium' !important;
+  /* 此处用!important会导致elmentui的icon组件失效 */
+  /* font-family: 'Shentox-Medium'; */
+}
+
+* *:focus {
+  outline: none;
+}
+
+.el-tooltip__popper {
+  border-radius: 6px !important;
+  color: #fff !important;
+  font-size: 16px !important;
+  line-height: 16px !important;
+}
+
+li {
+  list-style: none;
+}
+
+.sanjiaoxing-top {
+  width: 0;
+  height: 0;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 11px solid rgba(39, 187, 242, 0.4);
+}
+
+.sanjiaoxing-bottom {
+  width: 0;
+  height: 0;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-top: 11px solid rgba(39, 187, 242, 0.4);
+}
+
+.sanjiaoxing-top-active {
+  width: 0;
+  height: 0;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 11px solid rgba(39, 187, 242, 0.95);
+}
+
+.sanjiaoxing-bottom-active {
+  width: 0;
+  height: 0;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-top: 11px solid rgba(39, 187, 242, 0.95);
+}
+
+/*# sourceMappingURL=mixins.css.map */

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sparkera.nft.dao.mapper.CommonMapper">
+
+    <select id="getSysConfigByKey" resultType="String">
+        select val from ts_sys_config
+        where  attr=#{key} limit 1
+    </select>
+    <update id="upDateSysConfigByKey" >
+        update ts_sys_config set val=#{val} where  attr=#{key}
+    </update>
+
+    <insert id="insertBuySellInfo" parameterType="org.sparkera.nft.dao.dto.NftBuySellLogDto">
+        INSERT INTO `ts_buy_sell_info`(`tokenId`, `sell_address`, `sell_price`,
+                                                      `sell_time`, `buy_address`, `tx_fee`,
+                                                      `trade_erc_address`, `hashId`, `buy_time`,`nft_type`,`ext_id`)
+        VALUES (#{tokenId}, #{sellAddress}, #{sellPrice},
+                #{sellCreateTime}, #{buyAddress}, #{txFee},
+                #{erc20Address}, #{txHash}, now(), #{nftType},#{extId});
+    </insert>
+</mapper>

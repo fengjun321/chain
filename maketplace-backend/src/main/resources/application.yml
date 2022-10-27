@@ -1,0 +1,4 @@
+# 设置指定配置文件生效, 指定application-test.yml的配置文件生效
+spring:
+  profiles:
+    active: fj

@@ -1,0 +1,133 @@
+server:
+  port: 8089
+dblog: false
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    db1:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://v3game.crbllpn7bktt.us-east-2.rds.amazonaws.com:3306/sparkera_nft?useUnicode=true&amp&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&useSSL=true&serverTimezone=GMT%2B8
+      username: root
+      password: js751#%&manbfwpnjsaa%6#
+      type: com.alibaba.druid.pool.DruidDataSource
+      initialSize: 5
+      minIdle: 5
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      filters: stat,wall
+      # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    db2:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://v3game.crbllpn7bktt.us-east-2.rds.amazonaws.com:3306/game?useUnicode=true&amp&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&useSSL=true&serverTimezone=GMT%2B8
+      username: root
+      password: js751#%&manbfwpnjsaa%6#
+      type: com.alibaba.druid.pool.DruidDataSource
+      initialSize: 5
+      minIdle: 5
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      filters: stat,wall
+      # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+mybatis-plus:
+  # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/com.business.mapper/*Mapper.xml
+  # 如果是放在resource目录 classpath:/com.business.mapper/*Mapper.xml
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 2
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 2
+    #驼峰下划线转换
+    db-column-underline: true
+    #mp2.3+ 全局表前缀 mp_
+    #table-prefix: mp_
+    #刷新mapper 调试神器
+    refresh-mapper: true
+    #数据库大写下划线转换
+    capital-mode: false
+  configuration:
+    #打印sql
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #配置返回数据库(column下划线命名&&返回java实体是驼峰命名)，自动匹配无需as（没开启这个，SQL需要写as： select user_id as userId）
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    #配置JdbcTypeForNull, oracle数据库必须配置
+    jdbc-type-for-null: 'null'
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.fegin.bean
+#pagehelper分页插件配置
+pagehelper:
+  helperDialect: mysql
+  reasonable: false
+  supportMethodsArguments: true
+  params=count: countSql
+  sleuth:
+    sampler:
+      percentage: 1.0
+game:
+  world-url: http://18.221.19.47:9088/
+sso:
+  login: https://tregapi.firework.games/sso/tokenVerify
+erc20:
+  bnb: 0
+  wbnb: bb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c
+  quark: Cdd4403AF2c2Ecf94B61F5A02D429Ad80959de84
+  fire: 0f0Dd5E2c0e0c4A41F8908D73D36B8D142F6745a
+  usdt: 337610d27c682E347C9cD60BD4b3b107C9d34dDd
+bsc:
+  scan: true
+  chain-id: 97
+  node:
+    #url: https://apis.ankr.com/3d360d6c78c74d7f8ce2248b0a93315e/f2df52af64ea64349a5387f27494e0b8/binance/full/test
+    #url: https://nd-319-371-839.p2pify.com/579546b29cc4761e5febc5300ee91fa2
+    url: https://nd-449-727-014.p2pify.com/53ef10fdb576a5a66a775f4c23e2aa28
+  contract:
+    #去掉0x 防止自动转义
+    fireworkcard_address: 771d763Ca8B3848622b30C8CB3d4A444d36a706f
+    NFTtransfer_address: C1d6F6e7526a0166b993Fa1d52A1377F55cF72b9
+    fireworkCardMint_topic: fdcf800d47e6b3c4a4e4fbca7a07c06a9353e57135e3de1b4add48d177b2ef74
+    fireworkCardMutated_topic: 56ba3e2ed22df7d31a063bb5801e3a1883a2fa5cfc92a4a7f7fe24c6bfc54ae2
+    Transfer_topic: ddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+    NFTtransfer_topic: 2b3d2d4cc1c7d4153c1a7d8623db37f870de235226c33a1b94569583c9cd3f7b
+    NFTQuickSale_topic: 1ab9706d2abe40b6bc24dd4ad7e359fd30218a77cfabac1664f267c63f13e8d0
+    HSE_address: 31E5f8aF86Bd4EAe5947bC5BE37f5B0Deae52f11
+    PSE_address: C324eC88536e08Ac772399cf49EbB641E32e6212
+    PSEMint_topic: 6443cb0a07295f419fe8a6a28c06d58ab62441df44ea519c13ba474cd3a9ef23
+    EGSE_address: C597623893C010DD0d4b02FA9cDE1fBDec74F9fb
+    EGSEMint_topic: 070957e62ad302c097d0e3551435cbd08de8d494b8af8e4be1301a6f6262fc13
+    SHIP_address: bD893AE8eb937d71F853a65E1c6eCB93B846bc57
+    SHIPMint_topic: b711098d9b3acb4c54eb2572cd3fb4c1d03f81deaedeb75f0dfd5be0dcb0bb7f
+    EGG_address: 63c253d17b9873ee1d8da427915c7515fa5a0dc5
+    EGGMint_topic: 67828bf164e7d1f0c7169a208ad71c9457a13f0c526a5132916992f37abc593b
+    MBSE_address: b0e68c0cc0e767f88faac44aa43d768cdc0be5ff
+    MBSERebate_address: 7F67c447BE6fbA237cbA7594befaF0b1091D43e5
+    MBSERebate_topic: 4cf1c3e3dbc55728390d34fda81c947a86e0965de037bf5c1ef5fd6092e5fc3b
+    ASE_address: 03ad946d9d76b85f2a3f9d112d865c12c082363b
+    ASEMint_topic: ddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+    ISE_address: 62ad2c5263c7c475357caf772a50e560409ca3d0
+    ISE_topic: 4a39dc06d4c0dbc64b70af90fd698a233a518aa5d07e595d983b8c0526c8f7fb
+    PSE_swap_address: 7739dE0A0ef9E7964F693f343eE1292a76430a81
+    PSE_swap_topic: b332ebc316da84127a3dfbe8463b7f3e44f0dd9d71817547ef0200d1f2836088
+    Transfer1155_topic: 483e3452219ece3d2c1bdc300647c1d5ceccd293aa26fa8a177194053a56b385
+    CheckRebate_address: caeAfE38DC1B6B692cD8Fc15A6eFeA3541e82f41
+    NftTakeToGame_address: 17Ba88B3C24559c3683e997055b4F0903ea60043
+    NftTakeToGame_topic: b4e363672f36660d13cfc322dd2dca286fdfcc47dbab0b86b8cdf9e407deaa8d
