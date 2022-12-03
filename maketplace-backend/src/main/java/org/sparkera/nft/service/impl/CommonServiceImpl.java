@@ -374,16 +374,16 @@ public class CommonServiceImpl implements ICommonService {
 
         System.out.println("util fromBlock:" + Integer.valueOf(fromBlock, 16) + " toblock:" + Integer.valueOf(toBlock, 16));
         //FHC
-        String mintLogs = requestGetLog(BSCUtils.getFireworkCardAddress(), fromBlock, toBlock, BSCUtils.getFireworkCardMint_topic(), 0);
-        handleMintLogs(mintLogs);
-        String transferLogs = requestGetLog(BSCUtils.getFireworkCardAddress(), fromBlock, toBlock, BSCUtils.getTransfer_topic(), 0);
-        handleTransferLogs(transferLogs);
-        String mutatedLogs = requestGetLog(BSCUtils.getFireworkCardAddress(), fromBlock, toBlock, BSCUtils.getFireworkCardMutated_topic(), 0);
-        handleMutatedLogs(mutatedLogs);
-
-        //HSE
-        String hseTransferLogs = requestGetLog(BSCUtils.getHSE_address(), fromBlock, toBlock, BSCUtils.getTransfer_topic(), 0);
-        handleHseTransferLogs(hseTransferLogs);
+//        String mintLogs = requestGetLog(BSCUtils.getFireworkCardAddress(), fromBlock, toBlock, BSCUtils.getFireworkCardMint_topic(), 0);
+//        handleMintLogs(mintLogs);
+//        String transferLogs = requestGetLog(BSCUtils.getFireworkCardAddress(), fromBlock, toBlock, BSCUtils.getTransfer_topic(), 0);
+//        handleTransferLogs(transferLogs);
+//        String mutatedLogs = requestGetLog(BSCUtils.getFireworkCardAddress(), fromBlock, toBlock, BSCUtils.getFireworkCardMutated_topic(), 0);
+//        handleMutatedLogs(mutatedLogs);
+//
+//        //HSE
+//        String hseTransferLogs = requestGetLog(BSCUtils.getHSE_address(), fromBlock, toBlock, BSCUtils.getTransfer_topic(), 0);
+//        handleHseTransferLogs(hseTransferLogs);
 
         //PSE
         String pseMintLogs = requestGetLog(BSCUtils.getPSE_address(), fromBlock, toBlock, BSCUtils.getPSEMint_topic(), 0);
