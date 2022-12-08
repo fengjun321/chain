@@ -1,0 +1,404 @@
+  
+     //begin of genPartByItemData
+     function genCampItemData(uint8 value) public pure returns (uint256){
+        uint256 r=value;
+        r= r<< 8;
+     	return r;
+     }
+     //end of genPartByItemData
+     
+     
+     
+     //begin of genXXXValue
+     function genCampValue(uint256 nftId) public view returns (uint8){
+     	uint16 rnd=rnd1( 0+nftId,1000);
+			 if(rnd>= 0 && rnd < 250){
+			 	return 1;
+			 }
+			 else
+			 if(rnd>= 250 && rnd < 500){
+			 	return 2;
+			 }
+			 else
+			 if(rnd>= 500 && rnd < 750){
+			 	return 3;
+			 }
+			 else
+			 if(rnd>= 750 && rnd < 1000){
+			 	return 4;
+			 }
+        return 0;
+     }
+     //end of genXXXValue
+     
+     
+     
+    
+  
+     //begin of genPartByItemData
+     function genOccupationItemData(uint8 value) public pure returns (uint256){
+        uint256 r=value;
+        r= r<< 16;
+     	return r;
+     }
+     //end of genPartByItemData
+     
+     
+     
+     //begin of genXXXValue
+     function genOccupationValue(uint256 nftId) public view returns (uint8){
+     	uint16 rnd=rnd1( 1+nftId,1000);
+			 if(rnd>= 0 && rnd < 10){
+			 	return 1;
+			 }
+			 else
+			 if(rnd>= 10 && rnd < 20){
+			 	return 2;
+			 }
+			 else
+			 if(rnd>= 20 && rnd < 50){
+			 	return 3;
+			 }
+			 else
+			 if(rnd>= 50 && rnd < 110){
+			 	return 4;
+			 }
+			 else
+			 if(rnd>= 110 && rnd < 170){
+			 	return 5;
+			 }
+			 else
+			 if(rnd>= 170 && rnd < 350){
+			 	return 6;
+			 }
+			 else
+			 if(rnd>= 350 && rnd < 530){
+			 	return 7;
+			 }
+			 else
+			 if(rnd>= 530 && rnd < 650){
+			 	return 8;
+			 }
+			 else
+			 if(rnd>= 650 && rnd < 1000){
+			 	return 9;
+			 }
+        return 0;
+     }
+     //end of genXXXValue
+     
+     
+     
+    
+  
+     //begin of genPartByItemData
+     function genLevelItemData(uint8 value) public pure returns (uint256){
+        uint256 r=value;
+        r= r<< 24;
+     	return r;
+     }
+     //end of genPartByItemData
+     
+     
+     
+     
+     //begin of genXXXValue
+     function genLevelValue(uint256 nftId) public view returns (uint8){
+     	uint16 rnd=rnd1( 2+nftId,1000);
+			 if(rnd>= 0 && rnd < 30){			 		
+			 	return uint8(rnd1( 3+nftId,10) + 90) ;
+			 }
+			 else
+			 if(rnd>= 30 && rnd < 170){			 		
+			 	return uint8(rnd1( 4+nftId,29) + 60) ;
+			 }
+			 else
+			 if(rnd>= 170 && rnd < 530){			 		
+			 	return uint8(rnd1( 5+nftId,19) + 40) ;
+			 }
+			 else
+			 if(rnd>= 530 && rnd < 1000){			 		
+			 	return uint8(rnd1( 6+nftId,39) + 0) ;
+			 }
+        return 0;
+     }
+     //end of genXXXValue
+     
+     
+    
+  
+     //begin of genPartByItemData
+     function genSpecialItemData(uint8 value) public pure returns (uint256){
+        uint256 r=value;
+        r= r<< 32;
+     	return r;
+     }
+     //end of genPartByItemData
+     
+     
+     
+     
+     
+     //begin of genXXXValue
+     function genSpecialValue(uint256 nftId) public view returns (uint8){
+     	uint16 rnd=rnd1( 7+nftId,1000);
+			 if(rnd>= 0 && rnd < 10){			 		
+			 	return uint8( rnd1( 8+nftId,9) +1) ;
+			 }
+        return 0;
+     }
+     //end of genXXXValue
+     
+    
+  
+     //begin of genPartByItemData
+     function genModelItemData(uint8 value) public pure returns (uint256){
+        uint256 r=value;
+        r= r<< 40;
+     	return r;
+     }
+     //end of genPartByItemData
+     
+     
+     
+     //begin of genXXXValue
+     function genModelValue(uint256 nftId) public view returns (uint8){
+     	uint16 rnd=rnd1( 9+nftId,1000);
+			 if(rnd>= 0 && rnd < 10){
+			 	return 1;
+			 }
+			 else
+			 if(rnd>= 10 && rnd < 20){
+			 	return 2;
+			 }
+			 else
+			 if(rnd>= 20 && rnd < 30){
+			 	return 3;
+			 }
+			 else
+			 if(rnd>= 30 && rnd < 44){
+			 	return 4;
+			 }
+			 else
+			 if(rnd>= 44 && rnd < 45){
+			 	return 5;
+			 }
+			 else
+			 if(rnd>= 45 && rnd < 55){
+			 	return 6;
+			 }
+			 else
+			 if(rnd>= 55 && rnd < 75){
+			 	return 7;
+			 }
+			 else
+			 if(rnd>= 75 && rnd < 95){
+			 	return 8;
+			 }
+			 else
+			 if(rnd>= 95 && rnd < 110){
+			 	return 9;
+			 }
+			 else
+			 if(rnd>= 110 && rnd < 120){
+			 	return 10;
+			 }
+			 else
+			 if(rnd>= 120 && rnd < 130){
+			 	return 11;
+			 }
+			 else
+			 if(rnd>= 130 && rnd < 140){
+			 	return 12;
+			 }
+			 else
+			 if(rnd>= 140 && rnd < 190){
+			 	return 13;
+			 }
+			 else
+			 if(rnd>= 190 && rnd < 240){
+			 	return 14;
+			 }
+			 else
+			 if(rnd>= 240 && rnd < 300){
+			 	return 15;
+			 }
+			 else
+			 if(rnd>= 300 && rnd < 360){
+			 	return 16;
+			 }
+			 else
+			 if(rnd>= 360 && rnd < 400){
+			 	return 17;
+			 }
+			 else
+			 if(rnd>= 400 && rnd < 450){
+			 	return 18;
+			 }
+			 else
+			 if(rnd>= 450 && rnd < 530){
+			 	return 19;
+			 }
+			 else
+			 if(rnd>= 530 && rnd < 630){
+			 	return 20;
+			 }
+			 else
+			 if(rnd>= 630 && rnd < 720){
+			 	return 21;
+			 }
+			 else
+			 if(rnd>= 720 && rnd < 800){
+			 	return 22;
+			 }
+			 else
+			 if(rnd>= 800 && rnd < 880){
+			 	return 23;
+			 }
+			 else
+			 if(rnd>= 880 && rnd < 940){
+			 	return 24;
+			 }
+			 else
+			 if(rnd>= 940 && rnd < 1000){
+			 	return 25;
+			 }
+        return 0;
+     }
+     //end of genXXXValue
+     
+     
+     
+    
+  
+     //begin of genPartByItemData
+     function genHealthItemData(uint8 value) public pure returns (uint256){
+        uint256 r=value;
+        r= r<< 48;
+     	return r;
+     }
+     //end of genPartByItemData
+     
+     
+     
+     
+     //begin of genXXXValue
+     function genHealthValue(uint256 nftId) public view returns (uint8){
+     	uint16 rnd=rnd1( 10+nftId,1000);
+			 if(rnd>= 0 && rnd < 30){			 		
+			 	return uint8(rnd1( 11+nftId,10) + 90) ;
+			 }
+			 else
+			 if(rnd>= 30 && rnd < 150){			 		
+			 	return uint8(rnd1( 12+nftId,29) + 60) ;
+			 }
+			 else
+			 if(rnd>= 150 && rnd < 530){			 		
+			 	return uint8(rnd1( 13+nftId,19) + 40) ;
+			 }
+			 else
+			 if(rnd>= 530 && rnd < 1000){			 		
+			 	return uint8(rnd1( 14+nftId,39) + 0) ;
+			 }
+        return 0;
+     }
+     //end of genXXXValue
+     
+     
+    
+  
+     //begin of genPartByItemData
+     function genPowerItemData(uint8 value) public pure returns (uint256){
+        uint256 r=value;
+        r= r<< 56;
+     	return r;
+     }
+     //end of genPartByItemData
+     
+     
+     
+     
+     //begin of genXXXValue
+     function genPowerValue(uint256 nftId) public view returns (uint8){
+     	uint16 rnd=rnd1( 15+nftId,1000);
+			 if(rnd>= 0 && rnd < 30){			 		
+			 	return uint8(rnd1( 16+nftId,10) + 90) ;
+			 }
+			 else
+			 if(rnd>= 30 && rnd < 170){			 		
+			 	return uint8(rnd1( 17+nftId,29) + 60) ;
+			 }
+			 else
+			 if(rnd>= 170 && rnd < 530){			 		
+			 	return uint8(rnd1( 18+nftId,19) + 40) ;
+			 }
+			 else
+			 if(rnd>= 530 && rnd < 1000){			 		
+			 	return uint8(rnd1( 19+nftId,39) + 0) ;
+			 }
+        return 0;
+     }
+     //end of genXXXValue
+     
+     
+    
+  
+     //begin of genPartByItemData
+     function genArmorItemData(uint8 value) public pure returns (uint256){
+        uint256 r=value;
+        r= r<< 64;
+     	return r;
+     }
+     //end of genPartByItemData
+     
+     
+     
+     
+     //begin of genXXXValue
+     function genArmorValue(uint256 nftId) public view returns (uint8){
+     	uint16 rnd=rnd1( 20+nftId,1000);
+			 if(rnd>= 0 && rnd < 30){			 		
+			 	return uint8(rnd1( 21+nftId,10) + 90) ;
+			 }
+			 else
+			 if(rnd>= 30 && rnd < 150){			 		
+			 	return uint8(rnd1( 22+nftId,29) + 60) ;
+			 }
+			 else
+			 if(rnd>= 150 && rnd < 530){			 		
+			 	return uint8(rnd1( 23+nftId,19) + 40) ;
+			 }
+			 else
+			 if(rnd>= 530 && rnd < 1000){			 		
+			 	return uint8(rnd1( 24+nftId,39) + 0) ;
+			 }
+        return 0;
+     }
+     //end of genXXXValue
+     
+     
+    
+  
+     //begin of genPartByItemData
+     function genSpecialWeaponsItemData(uint8 value) public pure returns (uint256){
+        uint256 r=value;
+        r= r<< 72;
+     	return r;
+     }
+     //end of genPartByItemData
+     
+     
+     
+     
+     
+     //begin of genXXXValue
+     function genSpecialWeaponsValue(uint256 nftId) public view returns (uint8){
+     	uint16 rnd=rnd1( 25+nftId,1000);
+			 if(rnd>= 0 && rnd < 15){			 		
+			 	return uint8( rnd1( 26+nftId,9) +1) ;
+			 }
+        return 0;
+     }
+     //end of genXXXValue
+     
+    

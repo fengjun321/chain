@@ -1,0 +1,161 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "starShipAddr",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "fleetAddr",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "fireworkCardAddr",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "nftId",
+				"type": "uint256"
+			}
+		],
+		"name": "calculateFireworkCardCharacterPower",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "data",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "power",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "fleetId",
+				"type": "uint256"
+			}
+		],
+		"name": "calculateFleetPower",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "fleetId",
+				"type": "uint256"
+			}
+		],
+		"name": "calculateFleetPowerAfterConsideredDuration",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "starShipId",
+				"type": "uint256"
+			}
+		],
+		"name": "calculateStarShipPower",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "data",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "power",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

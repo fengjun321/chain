@@ -1,0 +1,1040 @@
+  
+     function doOpenStandard() private view returns (uint256) {
+        uint256 campValue = rnd1( 0,4);
+		uint256 matValue=0;
+		uint16 rnd=rnd1( 1,1000);
+		//mat sec
+			 if(rnd >= 0 && rnd< 0){
+			 	matValue=FireworkConstants.MAT_GOLD;
+			 }
+			 else
+			 if(rnd >= 0 && rnd< 300){
+			 	matValue=FireworkConstants.MAT_SILVER;
+			 }
+			 else
+			 if(rnd >= 300 && rnd< 1000){
+			 	matValue=FireworkConstants.MAT_COPPER;
+			 }
+		 //mat sec end
+		
+		uint256 rarValue=0;
+		uint256 itemTypeValue=0;
+		uint256 itemIdValue=0;
+		
+		if(campValue==FireworkConstants.CAMP_OMEN){
+		 	rnd=rnd1( 2,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 5){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 5 && rnd < 25){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 25 && rnd < 325){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 325 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+			 		rnd=rnd1( 3,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(4,5);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(5,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 6,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_SCIENTIST;
+					   		itemIdValue = rnd1(7,2);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(8,1);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+			 		rnd=rnd1( 9,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(10,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 11,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(12,2);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+		if(campValue==FireworkConstants.CAMP_AMDA){
+		 	rnd=rnd1( 13,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 5){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 5 && rnd < 25){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 25 && rnd < 325){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 325 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+			 		rnd=rnd1( 14,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(15,1);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 16,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(17,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+		 		   revert("There is no item has FireworkConstants.RARITY_EPIC in this pack");
+		 		}
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 18,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(19,1);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+		if(campValue==FireworkConstants.CAMP_EARTHUNION){
+		 	rnd=rnd1( 20,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 5){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 5 && rnd < 25){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 25 && rnd < 325){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 325 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+			 		rnd=rnd1( 21,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(22,4);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(23,3);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 24,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(25,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+			 		rnd=rnd1( 26,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(27,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 28,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(29,1);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(30,1);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+		if(campValue==FireworkConstants.CAMP_PROTOSS){
+		 	rnd=rnd1( 31,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 5){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 5 && rnd < 25){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 25 && rnd < 325){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 325 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+		 		   revert("There is no item has FireworkConstants.RARITY_ORDINARY in this pack");
+		 		}
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 32,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(33,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+			 		rnd=rnd1( 34,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(35,1);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(36,1);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 37,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_SCIENTIST;
+					   		itemIdValue = rnd1(38,1);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(39,1);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+         uint256 itemdata = buildItemDataV0(
+                    itemIdValue,
+                    itemTypeValue,
+                    campValue,
+                    rarValue,
+                    matValue
+                );
+         return itemdata;		
+     //end of function
+    }
+    
+  
+     function doOpenAdvanced() private view returns (uint256) {
+        uint256 campValue = rnd1( 40,4);
+		uint256 matValue=0;
+		uint16 rnd=rnd1( 41,1000);
+		//mat sec
+			 if(rnd >= 0 && rnd< 300){
+			 	matValue=FireworkConstants.MAT_GOLD;
+			 }
+			 else
+			 if(rnd >= 300 && rnd< 700){
+			 	matValue=FireworkConstants.MAT_SILVER;
+			 }
+			 else
+			 if(rnd >= 700 && rnd< 1000){
+			 	matValue=FireworkConstants.MAT_COPPER;
+			 }
+		 //mat sec end
+		
+		uint256 rarValue=0;
+		uint256 itemTypeValue=0;
+		uint256 itemIdValue=0;
+		
+		if(campValue==FireworkConstants.CAMP_OMEN){
+		 	rnd=rnd1( 42,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 10){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 10 && rnd < 40){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 40 && rnd < 560){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 560 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+			 		rnd=rnd1( 43,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(44,5);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(45,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 46,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_SCIENTIST;
+					   		itemIdValue = rnd1(47,2);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(48,1);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+			 		rnd=rnd1( 49,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(50,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 51,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(52,2);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+		if(campValue==FireworkConstants.CAMP_AMDA){
+		 	rnd=rnd1( 53,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 10){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 10 && rnd < 40){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 40 && rnd < 560){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 560 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+			 		rnd=rnd1( 54,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(55,1);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 56,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(57,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+		 		   revert("There is no item has FireworkConstants.RARITY_EPIC in this pack");
+		 		}
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 58,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(59,1);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+		if(campValue==FireworkConstants.CAMP_EARTHUNION){
+		 	rnd=rnd1( 60,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 10){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 10 && rnd < 40){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 40 && rnd < 560){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 560 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+			 		rnd=rnd1( 61,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(62,4);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(63,3);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 64,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(65,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+			 		rnd=rnd1( 66,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(67,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 68,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(69,1);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(70,1);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+		if(campValue==FireworkConstants.CAMP_PROTOSS){
+		 	rnd=rnd1( 71,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 10){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 10 && rnd < 40){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 40 && rnd < 560){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 560 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+		 		   revert("There is no item has FireworkConstants.RARITY_ORDINARY in this pack");
+		 		}
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 72,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(73,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+			 		rnd=rnd1( 74,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(75,1);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(76,1);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 77,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_SCIENTIST;
+					   		itemIdValue = rnd1(78,1);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(79,1);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+         uint256 itemdata = buildItemDataV0(
+                    itemIdValue,
+                    itemTypeValue,
+                    campValue,
+                    rarValue,
+                    matValue
+                );
+         return itemdata;		
+     //end of function
+    }
+    
+  
+     function doOpenPrecious() private view returns (uint256) {
+        uint256 campValue = rnd1( 80,4);
+		uint256 matValue=0;
+		uint16 rnd=rnd1( 81,1000);
+		//mat sec
+			 if(rnd >= 0 && rnd< 500){
+			 	matValue=FireworkConstants.MAT_GOLD;
+			 }
+			 else
+			 if(rnd >= 500 && rnd< 1000){
+			 	matValue=FireworkConstants.MAT_SILVER;
+			 }
+			 else
+			 if(rnd >= 1000 && rnd< 1000){
+			 	matValue=FireworkConstants.MAT_COPPER;
+			 }
+		 //mat sec end
+		
+		uint256 rarValue=0;
+		uint256 itemTypeValue=0;
+		uint256 itemIdValue=0;
+		
+		if(campValue==FireworkConstants.CAMP_OMEN){
+		 	rnd=rnd1( 82,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 30){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 30 && rnd < 95){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 95 && rnd < 705){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 705 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+			 		rnd=rnd1( 83,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(84,5);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(85,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 86,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_SCIENTIST;
+					   		itemIdValue = rnd1(87,2);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(88,1);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+			 		rnd=rnd1( 89,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(90,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 91,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(92,2);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+		if(campValue==FireworkConstants.CAMP_AMDA){
+		 	rnd=rnd1( 93,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 30){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 30 && rnd < 95){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 95 && rnd < 705){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 705 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+			 		rnd=rnd1( 94,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(95,1);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 96,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(97,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+		 		   revert("There is no item has FireworkConstants.RARITY_EPIC in this pack");
+		 		}
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 98,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(99,1);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+		if(campValue==FireworkConstants.CAMP_EARTHUNION){
+		 	rnd=rnd1( 100,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 30){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 30 && rnd < 95){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 95 && rnd < 705){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 705 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+			 		rnd=rnd1( 101,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(102,4);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(103,3);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 104,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(105,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+			 		rnd=rnd1( 106,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(107,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 108,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(109,1);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(110,1);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+		if(campValue==FireworkConstants.CAMP_PROTOSS){
+		 	rnd=rnd1( 111,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 30){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 30 && rnd < 95){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 95 && rnd < 705){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 705 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+		 		   revert("There is no item has FireworkConstants.RARITY_ORDINARY in this pack");
+		 		}
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 112,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(113,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+			 		rnd=rnd1( 114,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(115,1);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(116,1);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 117,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_SCIENTIST;
+					   		itemIdValue = rnd1(118,1);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(119,1);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+         uint256 itemdata = buildItemDataV0(
+                    itemIdValue,
+                    itemTypeValue,
+                    campValue,
+                    rarValue,
+                    matValue
+                );
+         return itemdata;		
+     //end of function
+    }
+    
+  
+     function doOpenLegendary() private view returns (uint256) {
+        uint256 campValue = rnd1( 120,4);
+		uint256 matValue=0;
+		uint16 rnd=rnd1( 121,1000);
+		//mat sec
+			 if(rnd >= 0 && rnd< 1000){
+			 	matValue=FireworkConstants.MAT_GOLD;
+			 }
+			 else
+			 if(rnd >= 1000 && rnd< 1000){
+			 	matValue=FireworkConstants.MAT_SILVER;
+			 }
+			 else
+			 if(rnd >= 1000 && rnd< 1000){
+			 	matValue=FireworkConstants.MAT_COPPER;
+			 }
+		 //mat sec end
+		
+		uint256 rarValue=0;
+		uint256 itemTypeValue=0;
+		uint256 itemIdValue=0;
+		
+		if(campValue==FireworkConstants.CAMP_OMEN){
+		 	rnd=rnd1( 122,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 35){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 35 && rnd < 110){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 110 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 1000 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+			 		rnd=rnd1( 123,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(124,5);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(125,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 126,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_SCIENTIST;
+					   		itemIdValue = rnd1(127,2);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(128,1);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+			 		rnd=rnd1( 129,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(130,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 131,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(132,2);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+		if(campValue==FireworkConstants.CAMP_AMDA){
+		 	rnd=rnd1( 133,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 35){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 35 && rnd < 110){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 110 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 1000 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+			 		rnd=rnd1( 134,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(135,1);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 136,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(137,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+		 		   revert("There is no item has FireworkConstants.RARITY_EPIC in this pack");
+		 		}
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 138,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(139,1);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+		if(campValue==FireworkConstants.CAMP_EARTHUNION){
+		 	rnd=rnd1( 140,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 35){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 35 && rnd < 110){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 110 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 1000 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+			 		rnd=rnd1( 141,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(142,4);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(143,3);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 144,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(145,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+			 		rnd=rnd1( 146,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(147,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 148,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(149,1);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(150,1);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+		if(campValue==FireworkConstants.CAMP_PROTOSS){
+		 	rnd=rnd1( 151,1000);		 	 
+		 	//rarity sec 
+			  	if(rnd >= 0 && rnd < 35){
+			 		rarValue=FireworkConstants.RARITY_LEGENDARY;
+			  	}
+			  	else
+			  	if(rnd >= 35 && rnd < 110){
+			 		rarValue=FireworkConstants.RARITY_EPIC;
+			  	}
+			  	else
+			  	if(rnd >= 110 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_RARE;
+			  	}
+			  	else
+			  	if(rnd >= 1000 && rnd < 1000){
+			 		rarValue=FireworkConstants.RARITY_ORDINARY;
+			  	}
+		 	//rarity sec end
+		 	
+		 		if(rarValue == FireworkConstants.RARITY_ORDINARY){
+		 		   revert("There is no item has FireworkConstants.RARITY_ORDINARY in this pack");
+		 		}
+		 		if(rarValue == FireworkConstants.RARITY_RARE){
+			 		rnd=rnd1( 152,1);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_COMMANDER;
+					   		itemIdValue = rnd1(153,2);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_EPIC){
+			 		rnd=rnd1( 154,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_WARRIOR;
+					   		itemIdValue = rnd1(155,1);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(156,1);
+					   	}
+		 		}		 					 	
+		 		if(rarValue == FireworkConstants.RARITY_LEGENDARY){
+			 		rnd=rnd1( 157,2);		 		
+					   	if(rnd ==  0){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_SCIENTIST;
+					   		itemIdValue = rnd1(158,1);
+					   	}
+					   	else
+					   	if(rnd ==  1){
+					   		itemTypeValue = FireworkConstants.ITEM_TYPE_TROOPER;
+					   		itemIdValue = rnd1(159,1);
+					   	}
+		 		}		 					 	
+		  }
+		
+		//end of camp
+         uint256 itemdata = buildItemDataV0(
+                    itemIdValue,
+                    itemTypeValue,
+                    campValue,
+                    rarValue,
+                    matValue
+                );
+         return itemdata;		
+     //end of function
+    }
+    

@@ -56,7 +56,7 @@ import static org.sparkera.nft.utils.BSCUtils.getNftTakeToGame_adress;
 public class CommonServiceImpl implements ICommonService {
     private static final BigInteger MAX_HEIGHT = new BigInteger("2000");
     private static HttpHeaders headers = new HttpHeaders();
-    private static boolean isfirst = false;
+    private static boolean isfirst = true;
     private static long dbDelTime = Long.MIN_VALUE;
     private static Queue<GameMsg> queGameMsg = new LinkedList<GameMsg>();
 
@@ -364,8 +364,8 @@ public class CommonServiceImpl implements ICommonService {
         }
 
         if (isfirst) {
-            mintLastBlock = BigInteger.valueOf(20321726);
-            newMintLastBlock = BigInteger.valueOf(20321727);
+            mintLastBlock = BigInteger.valueOf(25132780);
+            newMintLastBlock = BigInteger.valueOf(25132787);
             isfirst = false;
         }
 
@@ -430,8 +430,8 @@ public class CommonServiceImpl implements ICommonService {
         handleIseTransferLogs(iseMintAndTransferLogs);
 
         //TAKE IN
-        String takeInLogs = requestGetLog(BSCUtils.getNftTakeToGame_adress(), fromBlock, toBlock, BSCUtils.getNftTakeToGame_topic(), 0);
-        handleTakeInLogs(takeInLogs);
+//        String takeInLogs = requestGetLog(BSCUtils.getNftTakeToGame_adress(), fromBlock, toBlock, BSCUtils.getNftTakeToGame_topic(), 0);
+//        handleTakeInLogs(takeInLogs);
 
         // trade logs
         String buyNftLogs = requestGetLog(BSCUtils.getNFTTransferAddress(), fromBlock, toBlock, BSCUtils.getNFTtransfer_topic(), 0);
